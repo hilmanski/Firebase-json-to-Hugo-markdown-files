@@ -52,10 +52,10 @@ func main() {
 
         //markdown file structure
         text := "+++\n" +
-                "title: "+ title + "\n" +
-                "description: "+ description + "\n" +
-                "date: "+ created_at + "\n" +
-                "tag: "+ tag + "\n" +
+                "title = "+ title + "\n" +
+                "description = "+ description + "\n" +
+                "date = "+ created_at + "\n" +
+                "tag = "+ tag + "\n" +
                 "+++ \n" +
                 subject
 
