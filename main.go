@@ -43,7 +43,7 @@ func main() {
     for _, blog := range blogs {
         //metaData add double quote
         title := "\"" + blog.Title + "\""
-        description := "\"" + cutText(blog.Subject) + "\""
+        description := "\"" + createMetaSubject(blog.Subject) + "\""
         tag   := "\"" + blog.Tag + "\""
         created_at := "\"" + convertTime(blog.Time.Seconds) + "\""
 
@@ -86,8 +86,9 @@ func convertTime(seconds int) string {
     return date +"T"+ timeNew[1] + "+00:00"
 }
 
-func cutText(text string) string {
+func createMetaSubject(text string) string {
     text = strings.Replace(text, "\n", "", -1)
+    text = strings.Replace(text, "\"", "'", -1) //prevent if any double quote in meta
     if len(text) < 120 {
         return text
     } else {
