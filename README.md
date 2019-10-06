@@ -4,7 +4,7 @@ convert from firebase data or json to hugo markdown files
 ## What is this
 A Go script to generate markdown files from json file. In my case i exported my firebase data in json files to migrate it to hugo site
 
-## How to export firebase script?
+## How to export firebase database?
 Dalenguyen's [repo export firebase](https://github.com/dalenguyen/firestore-import-export) data
 
 ## Watch out
